@@ -253,6 +253,7 @@ a { color: inherit; }
 .alm-compare { overflow-x: auto; margin-bottom: var(--space-8); }
 .alm-compare table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: separate;
   border-spacing: 0;
   border: var(--stroke-2) solid var(--ink-900);
@@ -264,7 +265,6 @@ a { color: inherit; }
 .alm-compare th, .alm-compare td {
   padding: var(--space-3) var(--space-4);
   text-align: left;
-  width: 50%;
   font-size: var(--fs-sm);
 }
 .alm-compare th { font-weight: 800; }
