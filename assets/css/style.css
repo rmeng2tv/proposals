@@ -314,6 +314,38 @@ a { color: inherit; }
   .alm-case__proofs { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
 }
 
+/* ---------- 포트폴리오 캐러셀 ---------- */
+.alm-portfolio { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: var(--space-2); }
+.alm-portfolio__track { display: flex; gap: var(--space-5); }
+.alm-portfolio__card { flex: 0 0 78%; scroll-snap-align: start; }
+.alm-portfolio__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: var(--stroke-2) solid var(--ink-900);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sticker);
+  background: var(--white);
+}
+.alm-portfolio__ph {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: var(--stroke-2) dashed var(--pebble-300);
+  border-radius: var(--radius-md);
+  color: var(--fg-2);
+  font-weight: 700;
+  background: var(--pebble-100);
+}
+.alm-portfolio__cap { margin-top: var(--space-3); font-size: var(--fs-sm); color: var(--fg-2); font-weight: 600; }
+
+@media (min-width: 768px) {
+  .alm-portfolio__card { flex: 0 0 320px; }
+}
+
 /* ---------- 실측 스탯 ---------- */
 .alm-stats {
   display: grid;
