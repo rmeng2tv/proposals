@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>에디터 직접 해보기 · 상가 인테리어 샘플 · 알맹이컴퍼니</title>
+  <meta name="description" content="완성된 홈페이지의 사진·초점·배경 어둡기·문구를 직접 바꿔 보는 체험 페이지입니다. 시안 3종 전환과 PC·휴대폰 보기도 해볼 수 있습니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="에디터 직접 해보기 · 알맹이컴퍼니">
+  <meta property="og:description" content="사진과 문구를 직접 바꿔 보세요. 정해진 칸 안에서만 바뀌니 디자인은 그대로입니다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:url" content="https://rmeng2tv.github.io/proposals/homepage-together/editor/interior/">
+  <meta property="og:image" content="https://rmeng2tv.github.io/proposals/assets/img/og-homepage-together.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="canonical" href="https://rmeng2tv.github.io/proposals/homepage-together/editor/interior/">
+  <link rel="icon" type="image/png" href="../../../assets/img/logo-symbol.png">
+  <link rel="stylesheet" href="../../../assets/css/style.css">
+  <link rel="stylesheet" href="../../../assets/css/editor-demo.css">
+</head>
+<body class="alm-ed-body">
+
+<header class="alm-ed-bar">
+  <a class="alm-ed-bar__back" href="../../">제안서로</a>
+  <div class="alm-ed-seg" role="group" aria-label="시안 선택">
+    <span class="alm-ed-seg__label">시안</span>
+    <button type="button" data-set="draft" data-value="1">1</button>
+    <button type="button" data-set="draft" data-value="2">2</button>
+    <button type="button" data-set="draft" data-value="3">3</button>
+  </div>
+  <div class="alm-ed-seg alm-ed-seg--device" role="group" aria-label="보기 선택">
+    <button type="button" data-set="device" data-value="pc">PC</button>
+    <button type="button" data-set="device" data-value="phone">휴대폰</button>
+  </div>
+  <button type="button" class="alm-btn alm-btn--secondary alm-btn--sm alm-ed-bar__reset" data-action="reset">처음으로</button>
+</header>
+
+<div class="alm-ed-layout">
+
+  <main class="alm-ed-stage">
+    <div class="alm-ed-frame" data-device="pc">
+
+      <div class="smp smp--field" data-draft="1">
+        <p class="smp-ribbon">알맹이가 만든 체험용 샘플 홈페이지입니다</p>
+
+        <header class="smp-head">
+          <strong data-field="brand">알맹이 인테리어</strong>
+          <span class="smp-head__tel" data-field="phone">010-0000-0000</span>
+        </header>
+
+        <section class="smp-hero">
+          <div class="smp-hero__media" data-photo="hero" data-fx="50" data-fy="60" data-dim="35">
+            <img src="../../../assets/img/editor-demo/interior/hero.webp" alt="완성된 매장 내부" width="1600" height="1068">
+          </div>
+          <div class="smp-hero__copy">
+            <h1 class="smp-hero__title" data-field="heroTitle">문 닫는 날을 줄이는 상가 인테리어</h1>
+            <p class="smp-hero__sub" data-field="heroSub">철거부터 마감까지 한 팀이 맡고, 공사 일정은 날짜별로 미리 알려드립니다</p>
+            <span class="smp-btn">전화로 견적 받기</span>
+          </div>
+        </section>
+
+        <section class="smp-about">
+          <div class="smp-about__media" data-photo="about" data-fx="50" data-fy="50">
+            <img src="../../../assets/img/editor-demo/interior/about.webp" alt="철거 공사 중인 현장" width="1200" height="800" loading="lazy">
+          </div>
+          <div class="smp-about__copy">
+            <p class="smp-kicker">시공 방식</p>
+            <h2 class="smp-h2" data-field="aboutTitle">현장을 보고 견적을 드립니다</h2>
+            <p data-field="aboutBody">도면이나 사진만으로 금액을 정하지 않습니다. 직접 방문해 확인한 뒤, 공사 범위·기간·금액을 문서로 남겨드립니다</p>
+          </div>
+        </section>
+
+        <section class="smp-services">
+          <p class="smp-kicker">서비스</p>
+          <h2 class="smp-h2">이런 공사를 합니다</h2>
+          <ul class="smp-services__list">
+            <li><strong data-field="svc1Name">철거·원상복구</strong><span data-field="svc1Price">평당 15만원부터</span></li>
+            <li><strong data-field="svc2Name">매장 인테리어</strong><span data-field="svc2Price">평당 120만원부터</span></li>
+            <li><strong data-field="svc3Name">부분 시공</strong><span data-field="svc3Price">50만원부터</span></li>
+          </ul>
+          <p class="smp-note">가격은 예시입니다</p>
+        </section>
+
+        <section class="smp-info">
+          <dl>
+            <div><dt>상담 시간</dt><dd data-field="hours">평일 8:00~19:00 · 토요일 9:00~15:00</dd></div>
+            <div><dt>시공 지역</dt><dd data-field="area">전국 (제주·도서 지역은 상담 후 결정)</dd></div>
+            <div><dt>전화</dt><dd data-field="phone">010-0000-0000</dd></div>
+          </dl>
+        </section>
+
+        <footer class="smp-foot">
+          <span data-field="brand">알맹이 인테리어</span> · 체험용 가상 업체
+        </footer>
+
+        <div class="smp-callbar">전화 <span data-field="phone">010-0000-0000</span></div>
+      </div>
+
+    </div>
+  </main>
+
+  <aside class="alm-ed-panel" aria-label="에디터">
+    <button type="button" class="alm-ed-panel__handle" data-action="sheet" aria-expanded="false">편집하기</button>
+
+    <div class="alm-ed-panel__body">
+      <p class="alm-ed-note">체험용 화면입니다. 바꾼 내용은 저장되지 않고, 새로고침하면 처음으로 돌아갑니다. 올린 사진은 이 브라우저 안에서만 보이고 어디에도 전송되지 않습니다.</p>
+
+      <details class="alm-ed-group" open>
+        <summary>첫 화면</summary>
+        <label class="alm-ed-field"><span>업체명</span><input type="text" data-bind="brand" maxlength="12"><small class="alm-ed-count"></small></label>
+        <label class="alm-ed-field"><span>큰 문구</span><input type="text" data-bind="heroTitle" maxlength="24"><small class="alm-ed-count"></small></label>
+        <label class="alm-ed-field"><span>작은 문구</span><textarea data-bind="heroSub" maxlength="50" rows="2"></textarea><small class="alm-ed-count"></small></label>
+        <div class="alm-ed-photo">
+          <p class="alm-ed-photo__title">첫 화면 사진</p>
+          <label class="alm-ed-upload">사진 바꾸기<input type="file" accept="image/*" data-upload="hero"></label>
+          <p class="alm-ed-hint">아래 사진에서 꼭 보여야 할 곳을 누르세요.</p>
+          <div class="alm-ed-focus" data-focus="hero"><img alt="첫 화면 사진 초점 고르기"><span class="alm-ed-focus__dot"></span></div>
+          <label class="alm-ed-range" data-dim-drafts="1">
+            <span>배경 어둡기 <output></output></span>
+            <input type="range" min="0" max="70" step="5" data-dim="hero">
+            <small class="alm-ed-range__off">시안 1처럼 글자가 사진 위에 있을 때 쓰는 기능입니다.</small>
+          </label>
+        </div>
+      </details>
+
+      <details class="alm-ed-group">
+        <summary>소개</summary>
+        <label class="alm-ed-field"><span>제목</span><input type="text" data-bind="aboutTitle" maxlength="20"><small class="alm-ed-count"></small></label>
+        <label class="alm-ed-field"><span>본문</span><textarea data-bind="aboutBody" maxlength="120" rows="4"></textarea><small class="alm-ed-count"></small></label>
+        <div class="alm-ed-photo">
+          <p class="alm-ed-photo__title">소개 사진</p>
+          <label class="alm-ed-upload">사진 바꾸기<input type="file" accept="image/*" data-upload="about"></label>
+          <p class="alm-ed-hint">아래 사진에서 꼭 보여야 할 곳을 누르세요.</p>
+          <div class="alm-ed-focus" data-focus="about"><img alt="소개 사진 초점 고르기"><span class="alm-ed-focus__dot"></span></div>
+        </div>
+      </details>
+
+      <details class="alm-ed-group">
+        <summary>서비스·가격</summary>
+        <label class="alm-ed-field"><span>서비스 1</span><input type="text" data-bind="svc1Name" maxlength="12"><small class="alm-ed-count"></small></label>
+        <label class="alm-ed-field"><span>가격 1</span><input type="text" data-bind="svc1Price" maxlength="12"><small class="alm-ed-count"></small></label>
+        <label class="alm-ed-field"><span>서비스 2</span><input type="text" data-bind="svc2Name" maxlength="12"><small class="alm-ed-count"></small></label>
+        <label class="alm-ed-field"><span>가격 2</span><input type="text" data-bind="svc2Price" maxlength="12"><small class="alm-ed-count"></small></label>
+        <label class="alm-ed-field"><span>서비스 3</span><input type="text" data-bind="svc3Name" maxlength="12"><small class="alm-ed-count"></small></label>
+        <label class="alm-ed-field"><span>가격 3</span><input type="text" data-bind="svc3Price" maxlength="12"><small class="alm-ed-count"></small></label>
+      </details>
+
+      <details class="alm-ed-group">
+        <summary>영업 정보</summary>
+        <label class="alm-ed-field"><span>상담 시간</span><input type="text" data-bind="hours" maxlength="30"><small class="alm-ed-count"></small></label>
+        <label class="alm-ed-field"><span>시공 지역</span><input type="text" data-bind="area" maxlength="30"><small class="alm-ed-count"></small></label>
+        <label class="alm-ed-field"><span>전화</span><input type="tel" data-bind="phone" maxlength="13"><small class="alm-ed-count"></small></label>
+      </details>
+
+      <div class="alm-ed-outro">
+        <p>이런 에디터가 홈페이지와 함께 제공됩니다.</p>
+        <a class="alm-btn alm-btn--primary alm-btn--sm" href="../../">제안서로 돌아가기</a>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<script src="../../../assets/js/editor-demo.js"></script>
+</body>
+</html>
