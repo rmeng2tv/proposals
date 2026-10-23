@@ -350,7 +350,7 @@ a { color: inherit; }
 .alm-portfolio--drafts { padding-top: var(--space-5); }
 .alm-portfolio--drafts .alm-portfolio__track { padding-right: var(--space-2); }
 .alm-portfolio__card--picked { position: relative; }
-.alm-portfolio__card--picked .alm-portfolio__ph { border: var(--stroke-2) solid var(--ink-900); background: var(--sky-50); box-shadow: var(--shadow-sticker); }
+.alm-portfolio--drafts .alm-portfolio__card:not(.alm-portfolio__card--picked) .alm-portfolio__img { border-color: var(--pebble-300); box-shadow: none; }
 .alm-portfolio__card--picked .alm-portfolio__cap { color: var(--fg-1); }
 
 @media (min-width: 768px) {
