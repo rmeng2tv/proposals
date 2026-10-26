@@ -373,6 +373,7 @@ a { color: inherit; }
   box-shadow: var(--shadow-sticker);
 }
 .alm-demo-cta p { font-weight: 700; font-size: var(--fs-h3); line-height: 1.3; }
+.alm-demo-cta__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
 
 /* ---------- 실측 스탯 ---------- */
 .alm-stats {

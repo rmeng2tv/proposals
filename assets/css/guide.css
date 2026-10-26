@@ -1,0 +1,103 @@
+/* 쌩초보 가이드 (homepage-together/guide/) · 모바일 우선, 인쇄 시 A4 한 장 · style.css 토큰만 사용 */
+
+/* ---------- 후킹 헤더 ---------- */
+.alm-guide-hero { padding: var(--space-12) 0 var(--space-10); text-align: center; }
+.alm-guide-hero .alm-pill { margin-bottom: var(--space-5); }
+.alm-guide-hero__title {
+  font-size: var(--fs-display);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: var(--space-5);
+}
+.alm-guide-hero__title strong { color: var(--sky-500); }
+.alm-guide-hero__sub { color: var(--fg-2); }
+.alm-guide-hero__sub strong { color: var(--fg-1); }
+
+/* ---------- 3단계 ---------- */
+.alm-guide-steps { list-style: none; display: grid; gap: var(--space-12); }
+.alm-guide-step { display: grid; justify-items: center; text-align: center; gap: var(--space-3); }
+.alm-guide-step__head { display: inline-flex; align-items: center; gap: var(--space-3); }
+.alm-guide-step__head .alm-steps__num { width: 44px; height: 44px; font-size: 20px; }
+.alm-guide-step__head strong { font-size: var(--fs-h2); font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; }
+.alm-guide-step__text { max-width: 320px; margin-bottom: var(--space-2); }
+.alm-guide-step__text b { color: var(--sky-700); }
+.alm-guide-step__shot {
+  width: 100%;
+  max-width: 280px;
+  border: var(--stroke-2) solid var(--ink-900);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sticker);
+  background: var(--white);
+}
+.alm-guide-note { margin-top: var(--space-10); text-align: center; font-size: var(--fs-sm); color: var(--fg-2); }
+
+@media (min-width: 768px) {
+  .alm-guide-hero { padding: var(--space-16) 0 var(--space-12); }
+  .alm-guide-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-8); align-items: start; }
+  .alm-guide-step__text { min-height: 3.4em; }
+}
+
+/* ---------- 같은 방식 3종 ---------- */
+.alm-guide-more { list-style: none; display: grid; gap: var(--space-5); }
+.alm-guide-more li {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+  background: var(--white);
+  border: var(--stroke-2) solid var(--ink-900);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sticker);
+}
+.alm-guide-more img { width: 100%; border-radius: var(--radius-xs); }
+.alm-guide-more p { font-size: var(--fs-sm); color: var(--fg-2); }
+.alm-guide-more p strong { display: block; font-size: var(--fs-h3); color: var(--fg-1); line-height: 1.3; }
+
+@media (min-width: 768px) {
+  .alm-guide-more { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* ---------- 직접 해보기 ---------- */
+.alm-guide-try { text-align: center; display: grid; justify-items: center; gap: var(--space-5); }
+.alm-guide-try .alm-h2 { margin-bottom: 0; }
+.alm-guide-try p { color: var(--fg-2); }
+.alm-guide-try__actions { display: grid; gap: var(--space-4); width: 100%; max-width: 360px; }
+.alm-guide-try__actions .alm-btn { justify-content: center; }
+.alm-guide-try__url { display: none; }
+
+/* ---------- 인쇄 (A4 한 장 PDF) ---------- */
+@media print {
+  @page { size: A4; margin: 12mm; }
+  body { background: var(--white); font-size: 11pt; line-height: 1.5; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .alm-header, .alm-callbar, .alm-guide-try__actions, .alm-footer__biz { display: none; }
+  .js-reveal { opacity: 1; transform: none; transition: none; }
+  .alm-section { padding: 3mm 0; }
+  .alm-section--white { border: 0; background: var(--white); }
+  .alm-container { max-width: none; padding: 0; }
+
+  .alm-guide-hero { padding: 0 0 4mm; }
+  .alm-guide-hero .alm-pill { margin-bottom: 3mm; }
+  .alm-guide-hero__title { font-size: 28pt; margin-bottom: 2mm; }
+  .alm-guide-hero__title br { display: none; }
+
+  .alm-guide-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6mm; }
+  .alm-guide-step { gap: 2mm; }
+  .alm-guide-step__head strong { font-size: 18pt; }
+  .alm-guide-step__text { min-height: 3em; font-size: 10pt; margin-bottom: 0; }
+  .alm-guide-step__shot { max-width: 40mm; box-shadow: var(--shadow-sticker-sm); }
+  .alm-guide-note { margin-top: 2mm; }
+
+  .alm-guide-more-wrap .alm-h2 { font-size: 16pt; margin-bottom: 4mm; }
+  .alm-guide-more-wrap .alm-h2 br { display: none; }
+  .alm-guide-more { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4mm; }
+  .alm-guide-more li { padding: 3mm; gap: 2mm; box-shadow: none; break-inside: avoid; }
+  .alm-guide-more img { height: 20mm; object-fit: contain; }
+  .alm-guide-more p strong { font-size: 12pt; }
+
+  .alm-guide-try { gap: 2mm; }
+  .alm-guide-try .alm-h2 { font-size: 16pt; }
+  .alm-guide-try .alm-h2 br { display: none; }
+  .alm-guide-try__url { display: block; font-weight: 700; color: var(--sky-700); }
+
+  .alm-footer { padding: 3mm 0 0; }
+}
